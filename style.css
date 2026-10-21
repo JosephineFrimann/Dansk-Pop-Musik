@@ -1,0 +1,704 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* MENU */
+
+.menu {
+  width: 100%;
+  height: 52px;
+  background-color: #801b38;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  padding: 0 20px;
+}
+
+/* Logo */
+
+.logo img {
+  width: 40px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+/* Menu */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-left: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  padding: 0 34px;
+}
+
+/* Lodrette streger mellem menupunkterne */
+
+nav a + a {
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/********************** FORSIDE **************************/
+
+/* Baggrundsbilledet på forsiden */
+.København {
+  background-image: url(./imgs/København.webp);
+  background-size: cover;
+  background-position: center;
+  height: 730px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.København h1 {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 90px;
+  color: black;
+  font-weight: 900;
+}
+
+.København h2 {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Udvalgte artister-afnsit */
+.artister-sektion {
+  background-color: #72263d;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.artister-sektion h2 {
+  font-family: "Rubik Mono One", sans-serif;
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.artister-boks {
+  background-color: #9f5e5e;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.artist-kort {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist-kort img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.artist-kort p {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+}
+
+.billede-boks {
+  background-color: #f18c3e;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.billede-boks img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+.artist-kort p {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Styling for klikbare artist-kort */
+.artist-link {
+  text-decoration: none; /* Fjerner understregning */
+  color: inherit; /* Beholder tekstens oprindelige farve */
+  display: block; /* Gør at hele kortet er klikbart */
+}
+
+/* Poppens historie og statistik */
+.info-sektion {
+  background-color: #72263d;
+  padding: 40px 20px;
+}
+
+@media (max-width: 768px) {
+  .artister-boks {
+    flex-direction: column; /* Viser artisterne under hinanden på mobil */
+    align-items: center;
+  }
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.info-kort {
+  flex: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Overskrifterne "Poppens historie" og "Statistik" */
+.info-kort h2 {
+  font-family: "Rubik Mono One", sans-serif;
+  color: white;
+  font-size: 28px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.info-indhold {
+  background-color: #9f5e5e;
+  border-radius: 20px;
+  padding: 25px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+/* Teksten inde i boksene */
+.info-indhold p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* "Læs mere her" linket */
+.laes-mere {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Tidslinje og diagram billeder */
+.tidslinje img,
+.diagram-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.tidslinje img {
+  margin-top: 50px;
+}
+
+/* Footeren */
+footer {
+  background-color: #a46363;
+  padding: 30px 20px;
+  color: white;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/* De 3 lige store kolonner */
+.footer-kontakt,
+.footer-logo,
+.footer-ikoner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Overskrifter */
+.footer-kontakt h3,
+.footer-ikoner h3 {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 16px;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+}
+
+/* Venstre side */
+.footer-kontakt {
+  align-items: flex-start;
+}
+
+.footer-kontakt p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Midten: Logo */
+.footer-logo {
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  height: 50px;
+  width: auto;
+  transform: translateY(20px);
+}
+
+/* Højre side: Højrestiller boksen */
+.footer-ikoner {
+  align-items: flex-end;
+}
+
+/* Rækken med de 3 ikoner */
+.ikoner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Stor og flot afstand mellem ikonerne */
+  margin-top: 5px;
+}
+
+.ikoner a {
+  display: flex;
+  line-height: 0;
+}
+
+.ikoner img {
+  width: 25px;
+  height: 25px;
+  display: block;
+}
+
+/********************** HISTORIE **************************/
+.content-container {
+  background-color: #8b3a36; /* Rødbrun baggrundsfarve */
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Overskrifter */
+.main-title {
+  color: #fce09b; /* Lys gulelighvid farve til overskriften */
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.sub-title {
+  color: #fff;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+/* Billedets placering og størrelse */
+.timeline-wrapper {
+  max-width: 900px; /* Tilpas maksimal bredde efter ønske */
+  margin: 0 auto;
+}
+
+.timeline-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/********************** POP-ARTISTER **************************/
+
+.content-container {
+  background-color: #8b3a36;
+  color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+/* Sidens overskrift */
+.main-title {
+  font-family: "Rubik Mono One", sans-serif;
+  color: #fce09b;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+
+/* Grid layout til de 4 kort (2x2) */
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* De orange artistkort */
+.artist-card {
+  background-color: #e28835; /* Orange baggrundsfarve */
+  border-radius: 20px;
+  padding: 25px 20px 20px 20px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Billedets container til venstre i kortet */
+.artist-img-wrapper {
+  width: 40%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.artist-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Tekst-sektionen til højre i kortet */
+.artist-info {
+  width: 60%;
+  padding-left: 15px;
+  text-align: left;
+}
+
+.artist-name {
+  font-family: "Rubik Mono One", sans-serif;
+  color: #fff;
+  font-size: 1.3rem;
+  margin: 0 0 12px 0;
+  text-align: center;
+  font-weight: normal;
+}
+
+.artist-bio {
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Responsivt layout til mindre skærme */
+@media (max-width: 768px) {
+  .artists-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**********************HVAD SYNES DANSKERNE?**************************/
+
+/* Container og overskrifter */
+.content-container {
+  background-color: #8b3a36;
+  color: #fff;
+  padding: 50px 20px 80px 20px;
+  text-align: center;
+}
+
+.main-title {
+  font-family: "Rubik Mono One", sans-serif;
+  color: #fce09b;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.sub-title {
+  font-family: "Rubik Mono One", sans-serif;
+  color: #fff;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  line-height: 1.5;
+  font-weight: normal;
+  margin-bottom: 150px;
+}
+
+/* 2-kolonne gitter til diagrammerne */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.stat-box {
+  text-align: left;
+}
+
+.chart-title {
+  font-family: sans-serif;
+  font-size: 1.05rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* Billedernes tilpasning */
+.chart-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 20px;
+}
+
+/* Gør hele info-kortet klikbart uden stilændringer */
+.info-link {
+  text-decoration: none; /* Fjerner understregning af teksten */
+  color: inherit; /* Beholder tekstens oprindelige farver */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Sikrer at klik-området dækker hele boksen */
+}
+
+/* Responsivt design til mobil */
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Burgermenu - skjult på desktop */
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* De tre hvide streger */
+.burger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: white;
+  border-radius: 3px;
+}
+
+/* Mobilvisning */
+@media screen and (max-width: 768px) {
+  header.menu {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    position: relative !important;
+    padding: 10px 20px;
+  }
+
+  /* Vis burgerikonet */
+  .burger {
+    display: block !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    margin-left: auto !important;
+  }
+
+  /* Menuen er lukket som standard */
+  header.menu nav {
+    display: none;
+    position: absolute !important;
+    top: 100% !important; /* Lægger sig LIGE under headeren */
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background-color: #87172f !important; /* Dækkende rød baggrund */
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    z-index: 1000 !important;
+  }
+
+  /* Menuen åbnes ved klik */
+  header.menu nav.open {
+    display: flex !important;
+  }
+
+  /* Menupunkterne */
+  header.menu nav a {
+    display: block !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    padding: 15px 0 !important;
+    text-align: center !important;
+    color: white !important;
+    text-decoration: none !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.2) !important;
+    background: transparent !important;
+    margin: 0 !important;
+  }
+}
+
+/********************** M O B I L E S I T E **************************/
+
+/********************** INDEX **************************/
+@media screen and (max-width: 768px) {
+  /* 1. Tilpas overskrifter på forsiden så de ikke sprænger skærmen */
+  .København {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .København h1 {
+    font-size: 42px; /* Tilpasset mobilbredde */
+    line-height: 1.1;
+  }
+
+  .København h2 {
+    font-size: 22px;
+    margin-top: 15px;
+  }
+
+  /* 2. Udvalgte Artister: Lad kortene pakke pænt under hinanden eller scrolle */
+  .artister-boks {
+    flex-direction: column; /* Lægger artistkortene under hinanden */
+    align-items: center;
+    gap: 25px;
+    padding: 20px 15px;
+  }
+
+  .artist-kort {
+    width: 100%;
+    max-width: 280px; /* Sikrer pæn størrelse på mobil */
+  }
+
+  /* 3. Poppens historie & Statistik: Lægges under hinanden med 100% bredde */
+  .info-container {
+    flex-direction: column; /* Stakkes vertikalt */
+    gap: 30px;
+  }
+
+  .info-kort {
+    width: 100%; /* Fylder hele bredden på mobil */
+  }
+
+  .info-kort h2 {
+    font-size: 22px;
+  }
+
+  .info-indhold p {
+    font-size: 16px;
+  }
+
+  /* 4. Footeren lægges også pænt vertikalt på mobil */
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-kontakt {
+    align-items: center;
+  }
+
+  .footer-ikoner {
+    align-items: center;
+  }
+
+  .footer-logo img {
+    transform: none; /* Fjerner forskydning på mobil */
+  }
+}
+/********************** HISTORIE **************************/
+
+/********************** ARTISTER **************************/
+
+/********************** HVAD SYNES DANSKERNE **************************/

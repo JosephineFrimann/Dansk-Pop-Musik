@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dansk pop</title>
+    <link rel="icon" href="./imgs/favicon.ico" />
+
+    <!-- Rubik Mono One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="menu">
+        <a href="./imgs/logo.webp" class="logo">
+            <img src="./imgs/logo.webp" alt="Dansk Pop">
+        </a>
+
+        <!-- Burgermenu -->
+        <button class="burger" id="burger" aria-label="Åbn menu" aria-expanded="false" aria-controls="nav-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="nav-menu">
+            <a href="./index.html">FORSIDE</a>
+            <a href="./historie.html">POP-MUSIKKENS HISTORIE</a>
+            <a href="./pop-artister.html">DANSKE POP-ARTISTER</a>
+            <a href="./hvad-synes-danskerne.html">HVAD SYNES DANSKERNE</a>
+        </nav>
+    </header>
+
+    <script src="menu.js" defer></script>
+
+    <main class="content-container">
+        <!-- Overskrifter -->
+        <h1 class="main-title">HVAD SYNES DANSKERNE?</h1>
+        <p class="sub-title">HVAD SYNES DANSKERNE EGENTLIG NÅR MAN SPØRGER DEM IND TIL DEN PULSERENDE MUSIKGENRE, POP?
+        </p>
+
+        <!-- Statistiksektion med 2 billeder -->
+        <div class="stats-grid">
+
+            <!-- Venstre kolonne: Søjlediagram billede -->
+            <div class="stat-box">
+                <h2 class="chart-title">Hvornår lytter danskerne typisk til dansk pop-musik:</h2>
+                <img src="./imgs/pindediagram.webp" alt="Søjlediagram over hvornår danskerne lytter til pop-musik"
+                    class="chart-img">
+            </div>
+
+            <!-- Højre kolonne: Cirkeldiagram billede -->
+            <div class="stat-box">
+                <h2 class="chart-title">Hvor ofte lytter danskerne til dansk pop-musik:</h2>
+                <img src="./imgs/cirkeldiagram2.webp" alt="Cirkeldiagram over hvor ofte danskerne lytter til pop-musik"
+                    class="chart-img">
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+
+            <!-- Venstre side: Kontakt -->
+            <div class="footer-kontakt">
+                <h3>KONTAKT</h3>
+                <p>📞 +24 87 30 63</p>
+                <p>📍 Guldbergsgade 29N, 2200 København N</p>
+            </div>
+
+            <!-- Midten: Logo -->
+            <div class="footer-logo">
+                <a href="index.html">
+                    <img src="./imgs/logo.webp" alt="Dansk Pop Logo">
+                </a>
+            </div>
+
+            <!-- Højre side: Sociale medier -->
+            <div class="footer-ikoner">
+                <h3>FIND OS HER</h3>
+                <div class="ikoner">
+                    <a href="#"><img src="./imgs/insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="./imgs/youtube.png" alt="YouTube"></a>
+                    <a href="#"><img src="./imgs/snap.png" alt="Snapchat"></a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
